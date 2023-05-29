@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Modulo di registrazione</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Registra i tuoi dati</h1>
+    <p>Questo modulo non registra i dati, <br> è solo dimostrativo, <br> come template.<br><br>
+      Prova ad inserie i dati!</p>
+    <form method="post" action='#'>
+      <fieldset>
+        <label for="first-name">Il tuo nome: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Il tuo cognome: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Inserisci la tua Email: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Crea la tua password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" /> Account Personale</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Account Business</label>
+        <label for="terms-and-conditions">
+          <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" /> Accetto i <a href="https://www.mattiabellato.it" target="_blank" >termini e le condizioni.</a>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">Carica qui la tua foto profilo: <input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">Quanti anni hai: <input id="age" type="number" name="age" min="13" max="120" /></label>
+        <label for="referrer">Come sei venuto a conoscenza?
+          <select id="referrer" name="referrer">
+            <option value="">(Premi qui per sceglierne)</option>
+            <option value="1">Radio</option>
+            <option value="2">Youtube</option>
+            <option value="3">Instagram</option>
+            <option value="4">Sito internet</option>
+          </select>
+        </label>
+        <label for="bio">Racconta qualcosa di te:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Mi piace la pizza..."></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Invia" />
+    </form>
+  </body>
+</html>
